@@ -6,4 +6,6 @@ public interface ProjectService {
 	
 	public Map<String, Object> login(Map<String, Object> map);
 
+	public int join(UserDTO userDTO);
+	
 }

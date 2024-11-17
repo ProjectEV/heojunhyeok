@@ -56,12 +56,11 @@ table {
 			<input type="submit" value="로그인"> 
 			<input type="button" value="메인화면" onclick="location.href='/'">
 		</div>
+	</form>
 
 		<div>
 			<button onclick="location.href='/product/join'">회원가입</button>
 		</div>
-	</form>
-
 
 
 

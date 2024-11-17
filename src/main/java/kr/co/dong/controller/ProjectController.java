@@ -13,8 +13,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.co.dong.board.ProjectService;
+import kr.co.dong.board.UserDTO;
 
 @Controller
 public class ProjectController {
@@ -42,8 +44,30 @@ public class ProjectController {
 			session.setAttribute("user", user);
 			return "redirect:/";
 		}
-	}	
+	}
 	
+	@RequestMapping(value ="product/join", method = RequestMethod.GET)
+	public String join() {
+		logger.info("회원가입 화면");
+		return "join";
+	}
+	
+	
+	
+	
+	@RequestMapping(value ="product/join", method = RequestMethod.POST)
+	public String join(UserDTO userDTO, HttpServletRequest request,RedirectAttributes rttr) throws Exception {
+		request.setCharacterEncoding("UTF-8");
+		logger.info("yes");
+		int r = projectService.join(userDTO);
+		
+		if(r>0) {
+			rttr.addFlashAttribute("msg","ok");			
+			
+		}
+		return "login_2";
+				
+	}
 	
 	
 	

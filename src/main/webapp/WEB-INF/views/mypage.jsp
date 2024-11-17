@@ -54,9 +54,6 @@ table {
 
 <h2>주문/배송 조회</h2>
 
-<c:forEach>
-	
-</c:forEach>
 
 
 

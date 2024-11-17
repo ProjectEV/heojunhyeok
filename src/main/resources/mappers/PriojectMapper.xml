@@ -11,6 +11,14 @@
   	</select>
   
   
+  	<insert id="join" parameterType="UserDTO">
+  		insert into user(user_id, user_name, user_password, 
+  		user_email, user_birth, user_admin, user_phone, user_joindate, user_address)
+  		values (#{user_id}, #{user_name}, #{user_password},
+  		 #{user_email}, #{user_birth},0,#{user_phone}, curdate(), #{user_address})
+  	</insert>
+  
+  
   
   </mapper>
   

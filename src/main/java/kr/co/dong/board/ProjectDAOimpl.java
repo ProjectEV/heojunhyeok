@@ -21,4 +21,10 @@ public class ProjectDAOimpl implements ProjectDAO{
 		return sqlSession.selectOne(nameSpace+".login",map);
 	}
 
+	@Override
+	public int join(UserDTO userDTO) {
+		// TODO Auto-generated method stub
+		return sqlSession.insert(nameSpace+".join",userDTO);
+	}
+
 }

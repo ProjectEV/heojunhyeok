@@ -115,14 +115,14 @@ table {
 			<tbody>
 				<tr>
 					<th>아이디</th>
-					<td><input id="id" name="id" type="text" required /> * 4-12자의
+					<td><input id="id" name="user_id" type="text" required /> * 4-12자의
 						영문 대소문자와 숫자로만 입력</td>
 
 				</tr>
 
 				<tr>
 					<th>비밀번호</th>
-					<td><input id="pwd" name="pwd" type="password" required /> *
+					<td><input id="pwd" name="user_password" type="password" required /> *
 						4-12자의 영문 대소문자와 숫자로만 입력</td>
 				</tr>
 
@@ -133,33 +133,35 @@ table {
 
 				<tr>
 					<th>이름</th>
-					<td><input id="name" name="name" type="text" required /></td>
+					<td><input id="name" name="user_name" type="text" required /></td>
 				</tr>
 
 				<tr>
 					<th>전화번호</th>
-					<td><select name="phone1" size="1">
-							<option value="010" selected>010</option>
+					<td><!--<select name="user_phone" size="1">
+			  				<option value="010" selected>010</option>
 							<option value="011">011</option>
 							<option value="012">012</option>
 							<option value="013">013</option>
 					</select> - <input id="phone2" name="phone2" type="number" required /> - <input
-						id="phone3" name="phone3" type="number" required /></td>
+						id="phone3" name="phone3" type="number" required /> -->
+						<input id="user_phone" name="user_phone" type="number" required>
+						 </td>
 				</tr>
 
 				<tr>
 					<th>주소</th>
-					<td><input id="address" name="address" type="text" required /></td>
+					<td><input id="address" name="user_address" type="text" required /></td>
 				</tr>
 
 				<tr>
 					<th>생일</th>
-					<td><input id="birth" name="birth" type="text" required /></td>
+					<td><input id="birth" name="user_birth" type="text" required /></td>
 				</tr>
 
 				<tr>
 					<th>이메일</th>
-					<td><input id="email" name="email" type="text" required />@ <select
+					<td><input id="email" name="user_email" type="text" required />@ <select
 						name="email2" size="1">
 							<option value="1" selected>naver.com</option>
 							<option value="2">gmail.com</option>
@@ -172,7 +174,7 @@ table {
 		</table>
 
 		<div>
-			<input type="submit" value="회원가입" onclick="login_2"> 
+			<input type="submit" value="회원가입"> 
 			<input type="reset" value="다시작성">
 		</div>
 

@@ -8,7 +8,7 @@ public interface ProjectDAO {
 	public Map<String, Object> login(Map<String,Object> map);
 		
 	
-	public int join(BoardDTO boardDTO);
+	public int join(UserDTO userDTO);
 	
 		
 

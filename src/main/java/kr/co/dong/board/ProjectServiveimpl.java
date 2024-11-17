@@ -19,4 +19,10 @@ public class ProjectServiveimpl implements ProjectService {
 		return projectDAO.login(map);
 	}
 
+	@Override
+	public int join(UserDTO userDTO) {
+		// TODO Auto-generated method stub
+		return projectDAO.join(userDTO);
+	}
+
 }
